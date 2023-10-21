@@ -16,7 +16,7 @@ jobs:
       continue-on-error: true
       run: |
         curl -fsSL https://raw.githubusercontent.com/ZupIT/horusec/master/deployments/scripts/install.sh | bash -s latest
-        horusec start -p="./" -e="true" -o="json" -O=./horusec.json"
+        horusec start -p="./" -e="true" -o="json" -O="./horusec.json"
     - uses: actions/upload-artifact@v3
       with:
         name: horusec
