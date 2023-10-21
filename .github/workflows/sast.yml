@@ -16,8 +16,10 @@ jobs:
       continue-on-error: true
       run: |
         curl -fsSL https://raw.githubusercontent.com/ZupIT/horusec/main/deployments/scripts/install.sh | bash -s latest
-        docker --version
-        horusec start -p="./" -e="true" -o="json" -O="./horusec.json"
+        # horusec start -p="./" -e="true" -o="json" -O="./horusec.json"
+
+        horusec start -p="./" -e="true" --ignore="**/.vscode/**, **/*.env, **/.mypy_cache/**, **/tests/**"
+
     - uses: actions/upload-artifact@v3
       with:
         name: horusec
