@@ -28,7 +28,7 @@ jobs:
   trivy:
     name: trivy scan
     runs-on: ubuntu-20.04
-    
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -64,3 +64,12 @@ jobs:
       with:
         name: npm audit
         path: report_npmaudit.json
+    
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: '16'
+    - run: |
+      npm install -g better-npm-audit
+      better-npm-audit audit
