@@ -1,4 +1,4 @@
-name: Deploy Vulnerable Application                                  # workflow name
+name: Deploy Vulnerable Application # workflow name
 
 on:
   push:
