@@ -1,9 +1,12 @@
 name: Deploy Vulnerable Application # workflow name
 
 on:
-  push:
-    branches:
-      - master
+  workflow_run:
+    workflows:
+      - Sast
+    types:
+      - completed
+      
 jobs:
   deploy-heroku:
     name: Deploy Heroku
