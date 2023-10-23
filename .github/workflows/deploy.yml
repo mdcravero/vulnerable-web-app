@@ -1,12 +1,11 @@
-name: Deploy Vulnerable Application # workflow name
-
+name: Deploy App
 on:
   workflow_run:
     workflows:
       - Sast
     types:
       - completed
-      
+
 jobs:
   deploy-heroku:
     name: Deploy Heroku
