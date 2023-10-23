@@ -8,6 +8,8 @@
 - Escaneo de dependencias con npm-audit y generación de un artefacto
 - Escaneo de dependencias con better-npm-audit y visualización de los resultados por consola
 
+![better-npm-audit](https://imgur.com/rkizWup.png)
+
 
 ### Deploy
 
@@ -17,3 +19,4 @@ Se realiza un despliegue de la aplicación a Heroku solo si se completa el anál
 
 Se realiza un análisis del endpoint de la aplicación con owasp, si esta se desplegó con éxito, y se envia el informe a Faraday
 
+![Faraday Dashboard](https://imgur.com/L4FzkSz.png)
